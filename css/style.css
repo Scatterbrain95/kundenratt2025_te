@@ -1,1 +1,41 @@
-/* Denna fil skall innehålla din CSS kod */
+body{
+    margin: auto;
+    height: auto;
+}
+
+#gaz{
+    margin-right: 50px;
+}
+.head{
+    width: 100vw;
+    position: fixed;
+}
+.navigation{
+    display: flex;
+    gap: 20px ;
+    padding-left: 20px;
+    align-items: baseline;
+    border: solid black 1px;
+}
+.nav-items{
+    text-decoration: none;
+}
+
+.main-wrapper{
+    display: flex;
+    flex-direction: column;
+    border: black solid 1px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.menu-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:baseline;
+    gap: 20px;
+    border: black solid 1px;
+    height: 100vh;
+}
