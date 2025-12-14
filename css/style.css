@@ -1,40 +1,52 @@
-
-
 body{
-    margin: auto;
+    margin: 0;
     height: auto;
+    background-color: #5A4B3A;
+    font-family: "Dancing Script", cursive;
 }
 
 #gaz{
-    margin-right: 50px;
-    font-family: "Dancing Script", cursive;
+    margin-right: 5vh;
+    color: #E7D7C1;
 }
+
 .head{
     width: 100vw;
     position: fixed;
-}
-.navigation{
-    font-family: "Dancing Script", cursive;
-    display: flex;
-    gap: 20px ;
-    padding-left: 20px;
-    align-items: baseline;
-    border: solid #2E2110 1.5px;
     background-color: #3A2A15;
+    border-bottom: 1.5px solid #3F2C1F;
+    z-index: 100;
 }
+
+.navigation{
+    display: flex;
+    gap: 20px;
+    padding: 1vh 2vw;
+    align-items: baseline;
+    background-color: #3A2A15;
+    border-bottom: 1.5px solid #3F2C1F;
+}
+
 .nav-items{
     text-decoration: none;
     color: #E7D7C1;
+    font-size: 2vh;
+    transition: color 0.3s;
+    margin-right: 2vh;
+}
+
+.nav-items:hover{
+    color: #8C6F57;
 }
 
 .main-wrapper{
     background-repeat: no-repeat;
     background-position: left center;
     background-image: url("/img/Outside_view.jpg");
-    background-size: 150%;  
+    background-size: cover;  
     display: flex;
     flex-direction: column;
-    border: #6E3B0E solid 1px;
+    border: 1px solid #3F2C1F;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -55,30 +67,153 @@ body{
 }
 
 .open-times{
-    color: #E4D6C4;
+    color: #E7D7C1;
     font-size: 4vh;
     -webkit-text-stroke-width: 0.8px;
     -webkit-text-stroke-color: #3A2A15; 
 }
 
-.menu-wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-    border: #6E3B0E solid 1px;
-    height: 100vh;
-}
-
-
-
-.gallery-wrapper{
-    height: 100vh;
-    border: #6E3B0E solid 1px;   
-    display: flex;
-    justify-content: center;
-}
 .header{
+    font-size: 4vh;
+    color: #E7D7C1;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #3A2A15;
     margin-top: 20vh;
 }
+
+.menu-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    border: 1px solid #3F2C1F;
+    height: 100vh;
+    background-color: #5A4B3A;
+    padding: 2vw 0;
+}
+
+.main-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3vh;
+    margin: 1vh;
+}
+
+.side-group {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+    width: 100%;
+}
+
+.menu-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2vw;  
+    padding: 2vw;
+    justify-content: center;
+}
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    width: 20vw; 
+    min-width: 200px;
+    height: 30vh;
+    border: 2px solid #3A2A15;
+    border-radius: 15px;
+    overflow: hidden; 
+    background-color: #7B5C4A;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 2vh;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 60%; 
+    object-fit: cover;
+    background-color: #E7D7C1;
+}
+
+.menu-card h4, .menu-card p {
+    margin: 1vh;
+    text-align: center;
+    font-size: 3vh;
+    color: #3A2A15;
+}
+
+#btn {
+    font-size: 2vh;
+    height: 4vh;
+    width: 6vw;
+    border-radius: 1vh;
+    color:#E7D7C1;
+    border: 2px solid #3F2C1F;
+    background-color: #5A4B3A;
+    box-shadow: #3F2C1F 1px 1px 1px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: "Dancing Script", cursive;
+}
+
+#btn:hover{
+    transform: translateY(-5px);
+    box-shadow: #3F2C1F 1px 1px 3px 3px;
+}
+
+.gallery-wrapper {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0; 
+    background-color: #5A4B3A;
+    overflow: hidden;
+    position: relative; /* added */
+}
+
+.img-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "img3 img2 img2 img4"
+        "img3 img2 img2 img4"
+        "img3 img2 img2 img4"
+        "img1 img1 img5 img5"
+        "img1 img1 img5 img5"
+        "img1 img1 img5 img5"
+        "img1 img1 img5 img5";
+    position: absolute;
+    top: 0;      
+    left: 0;       
+    right: 0;     
+    bottom: 0; 
+    width: 100%; 
+    height: 100%;   
+}
+
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+#gallery-image1 { grid-area: img1; }
+#gallery-image2 { grid-area: img2; }
+#gallery-image3 { grid-area: img3; }
+#gallery-image4 { grid-area: img4; }
+#gallery-image5 { grid-area: img5; }
+
+
